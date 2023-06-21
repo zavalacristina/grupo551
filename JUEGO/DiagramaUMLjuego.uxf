@@ -1,0 +1,134 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>890</x><y>0</y><w>410</w><h>640</h></coordinates><panel_attributes>&lt;&lt;protagonista&gt;&gt;
+Package
+
+--
+import flash.display.MovieClip
+import.flash.events.Event
+import.flash.events.KeyboardEvent
++ class protagonista extends MovieClip
+- vel: int=10
+-der: boolean=false
+-izq: boolean=false
+-limite_x_der: int =510
+-limite_x_izq: 35;
+-
++ protagonista()
+addEventListener(Event.ENTER_FRAME,motor)
++ motor(e:Event)
+if(der)
+if(x&lt;=limite_x_der)
+x+=vel
+else if(izq)
+if(x&gt;=limite_x_izq)
+x=vel
+control()
++ control()
+stage.addEventListener(KeyboardEvent.KEY_DOWN, key_down)
+stage.addEventListener(KeyboardEvent.KEY_UP, key_up)
++ key_down(e:KeyboardEvent):void
+switch(e.keyCode)
+case 39:
+der=true
+break
+case 37:
+izq=true
+break
++  key_up(e:KeyboardEvent): void
+switch (e.keycode)
+case 39:
+der=false
+break
+case 37:
+iqz=flase
+break
+
+
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>470</x><y>470</y><w>310</w><h>260</h></coordinates><panel_attributes>&lt;&lt;vala&gt;&gt;
+Package
+
+--
+import flash.diaplay.MovieCliep
+import flash.events.Event
+- vel:number=5
+--
++ vala(pos_x, pos_y): void
+x= pos_x
+y=pos_y +30
+this.addEventListener(Event.ENTER_FRAME,mover)
++ mover(e:Event)
+y+=vel
+if(y&gt;=350)
+vel=0
+this.addEventListener(Event.ENTER_FRAME,mover)
+stage.removechild(this)
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>0</y><w>330</w><h>620</h></coordinates><panel_attributes>&lt;&lt;antagonista&gt;&gt;
+Package
+
+--
+import flash.display.MovieClip
+import flash.events.Event
+import.flash.utils.Timer
+import flash.events.TimerEvent
+- vel: number=10
+- limite_der: int=520
+- limite_iqz: lint=30
+- dir: number=1
+- cambia: timer =new timer(200,0)
+- tipo: number
+- lanzar: timer=new timer(2000,0)
+--
++ antagonista()
+addEventListener(Event.ENTER_FRAME,actualiza)
+cambia.addEventListener(TimerEvent.TIMER, cambia_dir)
+cambia.start()
+lanzar.addEventListener(TimerEvent.TIMER, lanzar_vala)
+lanzar.start()
++ lanza_vala(TimerEvent)
+var vala_nueva= new vala(x,y)
+stage.addChild(vala_nueva)
++ cambia_dir(e:TimerEvent)
+tipo=Match.floor(Match.random() *8)
+trace(tipo)
+switch (tipo)
+case 1:
+dir=1
+break
+case 2:
+dir=-1
+break
++ actualiza(e:Event)
+x+=vel *dir
+if(x&gt;=limite_der)
+dir=-1
+if(x&lt;=limite_izq)
+dir=1
+
+
+
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>470</x><y>0</y><w>320</w><h>280</h></coordinates><panel_attributes>&lt;&lt;Setup&gt;&gt;
+Package
+--
+import flash.display.MovieClip
++ class setup extends MovieClip
+- piso_new:piso =new piso()
+- antagonista_new: antagonista=new antagonista()
+- protagonista_new: protagonista=new protagonista()
+--
++ setup()
+addChild (piso_new)
+addChild(antagonista_new)
+addChild(protagonista_new)
+piso_new.y =370
+piso_new.x=275
+antagonista_new.y=80
+antagonista_new.x=275
+protagonista_new.x=275
+protagonista_new.y=320
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>110</y><w>170</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;150;10</additional_attributes></element><element><id>Relation</id><coordinates><x>780</x><y>110</y><w>130</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>110;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>310</y><w>320</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>300;160;300;10;10;10</additional_attributes></element></diagram>
