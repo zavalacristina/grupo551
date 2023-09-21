@@ -1,0 +1,44 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>class ahorcado
+
+</help_text><element><id>UMLClass</id><coordinates><x>420</x><y>10</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;ahorcado&gt;&gt;
+
+--
+-palabra _usuario:String
+-palabra_secreta:String
+-intentos:int
+--
++imprimir_estado()
++buscar_letra(letra)
++determinar_si_gano()
++pedir_letra()
++quitar_acentos()
++jugar()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>310</y><w>100</w><h>30</h></coordinates><panel_attributes>main</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>190</y><w>30</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>460</y><w>100</w><h>30</h></coordinates><panel_attributes>class Ahorcado
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>70</x><y>90</y><w>430</w><h>260</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;240;410;240</additional_attributes></element><element><id>UMLClass</id><coordinates><x>820</x><y>10</y><w>210</w><h>80</h></coordinates><panel_attributes>&lt;&lt;estado&gt;&gt;
+
+--
+-palabra _usuario:String
+-palabra_secreta:String
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>620</x><y>30</y><w>220</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>200;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>80</y><w>410</w><h>270</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>390;10;390;250;10;250</additional_attributes></element><element><id>UMLClass</id><coordinates><x>680</x><y>140</y><w>210</w><h>80</h></coordinates><panel_attributes>&lt;&lt;jugar&gt;&gt;
+
+--
+-letra()
+-veces()
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>30</y><w>230</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;210;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>120</x><y>130</y><w>210</w><h>90</h></coordinates><panel_attributes>&lt;&lt;letra&gt;&gt;
+
+--
+-letra()
+--
++quitar_acentos()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>60</y><w>210</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;70;10;10;190;10</additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>210</y><w>30</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>10</y><w>210</w><h>80</h></coordinates><panel_attributes>&lt;&lt;acento&gt;&gt;
+
+--
+-acento()
+-reemplazo()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>630</x><y>60</y><w>150</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>130;80;130;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>780</x><y>210</y><w>30</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>330</y><w>30</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;130;10;10</additional_attributes></element></diagram>
